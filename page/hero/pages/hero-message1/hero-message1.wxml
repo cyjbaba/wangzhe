@@ -1,0 +1,172 @@
+<!--page/hero/pages/hero-message/hero-message.wxml-->
+<view class="page">
+  <view class="page_hd">
+    <view class="page-section">
+      <view class="page-section-spacing">
+
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%;">
+          <image id="demo1" class="scroll-view-item_H " src="../../../../image/dc-skin1.png"></image>
+          <image id="demo2" class="scroll-view-item_H " src="../../../../image/dc-skin2.png"></image>
+          <image class="scroll-view-item_H" src="../../../../image/dc-skin3.png"></image>           <image class="scroll-view-item_H" src="../../../../image/dc-skin4.png"></image>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="weui-article">
+      <view class="weui-article__h2 job_warrior">法师</view>
+      <view class="weui-article__h1" style='font-size:25px;'>貂蝉</view>
+      <view class="page-section page-section-gap">
+
+        <view class="progress-box">
+          <view class="weui-article__title">生存能力</view>
+          <progress percent="40" color="#10AEFF" active stroke-width="3" />
+        </view>
+
+        <view class="progress-box">
+          <view class="weui-article__title">攻击伤害</view>
+          <progress percent="20" color="#10AEFF" active stroke-width="3" />
+        </view>
+
+        <view class="progress-box">
+          <view class="weui-article__title">技能效果</view>
+          <progress percent="70" color="#10AEFF" active stroke-width="3" />
+        </view>
+
+        <view class="progress-box">
+          <view class="weui-article__title">上手难度</view>
+          <progress percent="60" color="#10AEFF" active stroke-width="3" />
+        </view>
+
+      </view>
+      <view class="weui-article__section">
+        <view class="weui-article__h1 "><image class="icon-style" src="../../../../image/book.png"></image>技能介绍</view>
+
+        <view class="weui-tab">
+          <view class="weui-navbar">
+          
+            <block wx:for="{{tabs}}" wx:key="*this">
+              <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                <image class="weui-navbar__title" src="{{item}}"></image>
+              </view>
+            </block>
+            <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+          </view>
+          <view class="weui-tab__panel">
+            <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+              <view class="weui-article__h2">语·花印</view>
+              <view class="weui-article__h3">
+                被动：貂蝉的技能命中会为敌人叠加花之印记，持续8秒，叠加满4层后印记触发，回复自身100点生命，同时会对周围敌人造成160（+64％法术加成）点真实伤害并减少其90％移动速度，持续3秒
+                <view class="weui-media-box__desc">小提示：貂蝉每次使用其它技能对敌人造成印记爆炸的时候，爆炸效果会对敌方造成范围伤害并减速，而且该爆炸伤害无视对方护甲防御，是真实伤害.</view>
+              </view>
+
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+              <view class="weui-article__h2">落·红雨</view>
+              <view class="weui-article__h3">
+                貂蝉向指定方向挥出花球，花球飞出一段时间后会返回貂蝉手中，挥出和返回会对路径上的敌人造成180/220/260/300/340/380(+57％法术加成）点法术伤害
+                <view class="weui-media-box__desc">小提示：一条直线上造成两次伤害，由于有一定的延迟，所以需要预判对手的走位施放</view>
+              </view>
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+              <view class="weui-article__h2">缘·心结</view>
+              <view class="weui-article__h3">
+                貂蝉瞬间消失并立即出现在指定位置，同时会散发3枚花球攻击附近的敌人，每枚造成140/155/170/185/200/215(+24％法术加成）点法术伤害，如果花球命中敌人，还会减少4秒缘·心结的冷却时间
+                <view class="weui-media-box__desc">小提示：貂蝉2技能位移并且对最近的敌人造成3次伤害，如果3次都全命中在同一敌人身上，将会直接触发被动减速，该技能也能用于穿墙逃跑，在没有大招的情况下谨慎使用</view>
+              </view>
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+              <view class="weui-article__h2">绽·风华</view>
+              <view class="weui-article__h3">
+                貂蝉绽放风华在原地结成法阵，法阵生成及消失时都将造成210/245/280（+50％法术加成）点法术伤害，当貂蝉处于法阵范围内，落·红雨和缘·心结会获得额外的冷却缩减
+                <view class="weui-media-box__desc">小提示：大招是貂蝉非常霸道的AOE技能，虽然大招伤害很一般，但能在大范围对敌人触发被动效果，使得貂蝉其它技能造成更多伤害，冷却也更快</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-article__section">
+          <view class="weui-article__h1"><image class="icon-style" src="../../../../image/cloud-creative.png"></image>技能加点</view>
+          <view class="flex-wrp" style="flex-direction:row;">
+            <view class="skill-post">
+              <text>主升</text>
+              <image class="skills" src="../../../../image/dc-skill2.png"></image>
+              <text>落·红雨</text>
+            </view>
+            <view class="skill-post">
+              <text>副升</text>
+              <image class="skills" src="../../../../image/dc-skill04.png"></image>
+              <text>缘·心结</text>
+            </view>
+            
+          </view>
+
+        </view>
+        <view class="weui-article__section" scroll-x="true">
+          <view class="weui-article__h1"><image class="icon-style" src="../../../../image/jineng.png"></image>出装推荐</view>
+          <view class="weui-article__title">顺风出装</view>
+          <view class="flex-wrp" style="flex-direction:row;">
+          
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/shizhenzhishu.jpg"></image>
+              <text>噬神之书</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/boxuezhe.jpg"></image>
+              <text>博学者之怒</text>
+            </view>
+            <view class="skill-post">
+              <view style="border-radius: 50%;">
+                <image class="skills" src="../../../../image/tongkumianju.jpg"></image>
+              </view>
+              <text>痛苦面具</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/mifazhixue.jpg"></image>
+              <text>秘法之靴</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/huixiangzhizhang.jpg"></image>
+              <text>回响之杖</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/bingxuefazhang.jpg"></image>
+              <text>冰霜法杖</text>
+            </view>
+
+          </view>
+          <view class="weui-tab__content weui-article__h4">小提示：全输出法师出装，后期秒杀敌方刺客和脆皮，但容错率较低，需要一定的操作技巧</view>
+          <view class="weui-article__title">逆风出装</view>
+          <view class="flex-wrp" style="flex-direction:row;">
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/shizhenzhishu.jpg"></image>
+              <text>噬神之书</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/bingxuefazhang.jpg"></image>
+              <text>冰霜法杖</text>
+            </view>
+            <view class="skill-post">
+              <view style="border-radius: 50%;">
+                <image class="skills" src="../../../../image/yingrenzhizu.png"></image>
+              </view>
+              <text>影忍之足</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/binghenzhiwo.jpg"></image>
+              <text>冰痕之握</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/businiao.png"></image>
+              <text>不死鸟之眼</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/bingxuefazhang.jpg"></image>
+              <text>冰霜法杖</text>
+            </view>
+
+          </view>
+          <view class="weui-tab__content weui-article__h4">小提示：这是貂蝉偏2法坦的出装思路，团战伤害稳定，生存能力很强</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

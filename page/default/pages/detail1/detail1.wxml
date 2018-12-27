@@ -1,0 +1,43 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__desc">文章</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">王者荣耀4款限定皮肤返场 冰雪活动开启12.25更新</view>
+            <view class="weui-article__section">
+                <view class="weui-article__title">王者运营团队</view>
+                <view class="weui-article__title">时间： 2018-12-25 19:57:42 </view>
+
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                       开黑小分队再次回归，元旦第一周返场程咬金华尔街大亨和张良天堂福音，第二周返场孙尚香的火炮千金和妲己的仙境爱丽丝，这四款皮肤都是288点券，但只有华尔街大亨的性价比较高。
+                    </view>
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="../../../../image/zixun4.jpg" mode="aspectFit" style="height: 180px" />
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p" style="font-weight:bold;">
+                       冰雪王者活动
+                    </view>
+                    <view class="weui-article__p">
+                       本周三开启冰雪王者活动，累计登录和完成指定任务，可兑换冰雪聚王者礼包，有机会抽到裴擒虎、公孙离、狂铁、米莱狄，以及这4位英雄的伴生皮肤。
+                          <view class="weui-article__p">
+                        <image class="weui-article__img" src="../../../../image/zixun5.jpg" mode="aspectFit" style="height: 180px" />
+                    </view>
+                    </view>
+                    <view class="weui-article__p" style="font-weight:bold;">
+                      全英雄限免已开启
+                    </view>
+                    <view class="weui-article__p">
+                      庆Hero久竞获得获得2018KPL秋季赛总冠军，商城直售英雄全部开启限免。
+                    </view>
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="../../../../image/zixun6.jpg" mode="aspectFit" style="height: 180px" />
+                    </view>
+                </view>
+                </view>
+        </view>
+    </view>
+</view>

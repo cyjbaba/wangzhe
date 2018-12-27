@@ -1,0 +1,47 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__desc">文章</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">王者荣耀12月法师排行 王昭君已成中单霸者</view>
+            <view class="weui-article__section">
+                <view class="weui-article__title">王者运营团队</view>
+                <view class="weui-article__title">时间： 2018-11-29 16:06:02 </view>
+
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                       王者荣耀12月法师排行，本次更新法师王昭君半重做后表现突出，成为中单霸者。12月份的到来，除了王昭君强势法师还有哪些呢？下面一起来看看王者荣耀十二月法师排行吧！
+                    </view>
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="../../../../image/topic3.jpg" mode="aspectFit" style="height: 180px" />
+                    </view>
+                    <view class="weui-article__p">法师：
+</view>
+ <view class="weui-article__p">T0：王昭君、武则天
+                    </view>
+<view class="weui-article__p">T1：张良、干将莫邪、女娲、米莱狄、墨子、貂蝉、小乔、甄姬、安琪拉、嬴政、诸葛亮
+                    </view>
+<view class="weui-article__p">T2：沈梦溪、王昭君、弈星、周瑜、妲己、杨玉环
+                    </view>
+<view class="weui-article__p">T3：不知火舞、姜子牙、高渐离、扁鹊、芈月
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p" style="font-weight:bold;">
+                      解析：
+                    </view>
+                    <view class="weui-article__p">
+                      这次版本更新王昭君开启大招后还可走动，让她变得更加灵活，很多玩家把它当成辅助来打。现在王昭君就像早期的孙膑，大招出去后，还可走动，再加上被动加3次普攻效果，非常强势。当前王昭君胜率已经超越武则天，位居法师榜第一位。
+                    </view>
+                     <view class="weui-article__p">
+                        <image class="weui-article__img" src="../../../../image/zixun6.jpg" mode="aspectFit" style="height: 180px" />
+                    </view>
+                    <view class="weui-article__p">
+                     土豪英雄武则天退至第二，女娲一直不温不火胜率也算不错，只是用的人比较少，团战表现优异，自保能力突出，但是由于机制原因比赛节奏相对较慢。还有就是这次加强的墨子和高渐离，胜率都有所上涨，是近期比较热门的上分英雄。
+                    </view>
+                </view>
+                </view>
+        </view>
+    </view>
+</view>

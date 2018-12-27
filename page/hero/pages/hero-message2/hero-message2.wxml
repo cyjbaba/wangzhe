@@ -1,0 +1,172 @@
+<!--page/hero/pages/hero-message/hero-message.wxml-->
+<view class="page">
+  <view class="page_hd">
+    <view class="page-section">
+      <view class="page-section-spacing">
+
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%;">
+          <image id="demo1" class="scroll-view-item_H " src="../../../../image/mq0.jpg"></image>
+          <image id="demo2" class="scroll-view-item_H " src="../../../../image/mq2.jpg"></image>
+          <image id="demo2" class="scroll-view-item_H " src="../../../../image/mq3.jpg"></image>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="weui-article">
+      <view class="weui-article__h2 job_warrior">坦克</view>
+      <view class="weui-article__h1" style='font-size:25px;'>梦奇</view>
+      <view class="page-section page-section-gap">
+
+        <view class="progress-box">
+          <view class="weui-article__title">生存能力</view>
+          <progress percent="90" color="#10AEFF" active stroke-width="3" />
+        </view>
+
+        <view class="progress-box">
+          <view class="weui-article__title">攻击伤害</view>
+          <progress percent="60" color="#10AEFF" active stroke-width="3" />
+        </view>
+
+        <view class="progress-box">
+          <view class="weui-article__title">技能效果</view>
+          <progress percent="60" color="#10AEFF" active stroke-width="3" />
+        </view>
+
+        <view class="progress-box">
+          <view class="weui-article__title">上手难度</view>
+          <progress percent="60" color="#10AEFF" active stroke-width="3" />
+        </view>
+
+      </view>
+      <view class="weui-article__section">
+        <view class="weui-article__h1">技能介绍</view>
+
+        <view class="weui-tab">
+          <view class="weui-navbar">
+            <block wx:for="{{tabs}}" wx:key="*this">
+              <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                <image class="weui-navbar__title" src="{{item}}"></image>
+              </view>
+            </block>
+            <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+          </view>
+          <view class="weui-tab__panel">
+            <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+              <view class="weui-article__h2">食梦</view>
+              <view class="weui-article__h3">
+               被动：梦奇不断吞噬周围的噩梦，导致长胖；从最瘦到最胖总共会增长100点质量，耗时20秒；长胖会增加普通攻击和梦境萦绕、梦境漩涡攻击范围，并且最多可以增加150点物理攻击、200点物理和法术防御、92自然回血值；同时最多减少240点移动速度；梦奇使用技能会消耗质量，导致减肥；梦奇的第三次普通攻击将变更为横扫，横扫会造成更大范围的伤害
+                <view class="weui-media-box__desc">小提示：合理调整自身体积，在赶路和与敌人周旋时适当缩小体积提高移速，但要确保靠近敌人后拥有足够大的体积进行战斗。</view>
+              </view>
+
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+              <view class="weui-article__h2">梦境萦绕</view>
+              <view class="weui-article__h3">
+                梦奇消耗质量，形成可抵免525/630/735/840/945/1050（+120%法术加成）点伤害的护盾，护盾生成瞬间对周围敌人造成350/420/490/560/630/700（+80%法术加成）法术伤害并减少其50%移动速度，持续1.5秒。使用技能后7秒内下三次普通攻击命中敌人，每次均可回复6点质量
+                <view class="weui-media-box__desc">小提示：主要生存技能，也是调控质量的手段之一，带有减速效果。注意技能伤害范围会随质量提升。</view>
+              </view>
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+              <view class="weui-article__h2">梦境挥洒</view>
+              <view class="weui-article__h3">
+              梦奇将噩梦盛装在容器中抛出，容器落地破碎造成200/250/300/350/400/450（+45%法术加成）点法术伤害，噩梦会残留在地面，最多持续5秒，每0.5秒对范围内的敌人造成100/125/150/175/200/225（+22%法术加成）点法术伤害并且范围内敌人将减少30%移动速度。梦奇若触碰残留在地面的噩梦，便会将其回收；同时最多可残留2团噩梦
+                <view class="weui-media-box__desc">小提示：释放时需要一定的预判，考虑施法位置时，除了要尽量直接命中敌人，也要能让自己去触碰回收消耗的质量。该技能同样是常用的调控质量手段之一。</view>
+              </view>
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+              <view class="weui-article__h2">梦境漩涡</view>
+              <view class="weui-article__h3">
+                梦奇引导噩梦向指定位置输送，形成噩梦漩涡，对范围内的敌人每0.5秒造成150/225/300（+20%法术加成）点法术伤害并会减少50%移动速度，引导最多持续3秒；再次释放或输送结束，梦奇会传送到指定位置并拾起噩梦，对范围内敌人造成300/450/600（+40%法术加成）点法术伤害并将其击飞1秒；引导可被打断，并会执行50%冷却时间；梦奇至少拥有33点质量才能引导噩梦输送。被动：梦奇释放出的噩梦造成伤害时，目标会增加1层噩梦缠绕，每层噩梦缠绕会将其减少8%法术攻击力，持续4秒，最多可叠加5层
+                <view class="weui-media-box__desc">小提示：如果希望传送到目的地，那么尽量完整吟唱整个技能，这样传送后拥有较高质量。但也可以选择在吟唱期间取消技能，这样可只作为一个远程软控技能使用。</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-article__section">
+          <view class="weui-article__h1">技能加点</view>
+          <view class="flex-wrp" style="flex-direction:row;">
+            <view class="skill-post">
+              <text>主升</text>
+              <image class="skills" src="../../../../image/mq-skill03.png"></image>
+              <text>梦境挥洒</text>
+            </view>
+            <view class="skill-post">
+              <text>副升</text>
+              <image class="skills" src="../../../../image/mq-skill02.png"></image>
+              <text>梦境萦绕</text>
+            </view>
+          </view>
+
+        </view>
+        <view class="weui-article__section" scroll-x="true">
+          <view class="weui-article__h1">出装推荐</view>
+          <view class="weui-article__title">顺风出装</view>
+          <view class="flex-wrp" style="flex-direction:row;">
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/shizhenzhishu.jpg"></image>
+              <text>噬神之书</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/yingrenzhizu.png"></image>
+              <text>影忍之足</text>
+            </view>
+            <view class="skill-post">
+              <view style="border-radius: 50%;">
+                <image class="skills" src="../../../../image/tongkumianju.jpg"></image>
+              </view>
+              <text>痛苦面具</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/bingshuangfazhang.jpg"></image>
+              <text>冰霜法杖</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/huiyue.jpg"></image>
+              <text>辉月</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/xianzhe.png"></image>
+              <text>贤者的庇护</text>
+            </view>
+
+          </view>
+          <view class="weui-tab__content weui-article__h4">前期：噬神之书可以让梦奇通过精准的二技能不断回复血量，提高续航能力。
+中期：冰霜法杖不仅有输出也能提高血量，减速效果能让梦奇不断黏住目标进行风筝式输出。有了辉月之后，梦奇在开大进场之后就能躲过来自敌人的一波集火，吸收掉技能并为队友创造机会。最后来一件魔女斗篷提高自己的魔抗，增强生存能力
+
+后期：顺风局下这套装备可以最大化的实现生存和输出的双重结合</view>
+          <view class="weui-article__title">逆风出装</view>
+          <view class="flex-wrp" style="flex-direction:row;">
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/yingrenzhizu.png"></image>
+              <text>影忍之足</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/hongliandoupeng.jpg"></image>
+              <text>红莲斗篷</text>
+            </view>
+            <view class="skill-post">
+              <view style="border-radius: 50%;">
+                <image class="skills" src="../../../../image/buxiangzhengzhao.png"></image>
+              </view>
+              <text>不祥征兆</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/monvdoupeng.jpg"></image>
+              <text>魔女斗篷</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/fanshangcijia.jpg"></image>
+              <text>反伤刺甲</text>
+            </view>
+            <view class="skill-post">
+              <image class="skills" src="../../../../image/xianzhe.png"></image>
+              <text>贤者的庇护</text>
+            </view>
+
+          </view>
+          <view class="weui-tab__content weui-article__h4">小提示：前期：辅助装出门，先合成布甲靴，红莲在改版后是非常适合肉坦克出的。中期：不祥外加魔女，是现在物法双抗，弥补前期的差距。后期：最后就是继续提高自己的生存能力。</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

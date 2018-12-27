@@ -1,0 +1,72 @@
+<view class="page-body">
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd">
+      <navigator catchtap='onTapToDetail' class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="../../../../image/topic.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">正能量小课堂丨狄某的这4个逆风局套路，召唤师真的了解吗？</view>
+          <view class="weui-media-box__desc">自狄仁杰护卫站上线后，监视对局的力度增加，目前峡谷的对局环境都有所改善。但除了有护卫站应对不良对局行为之外，能在对局当下解决问题的，是召唤师你自己。</view>
+        </view>
+
+      </navigator>
+      <navigator catchtap="onTapToDetail1" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="../../../../image/topic2.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">王者荣耀4款限定皮肤返场 冰雪活动开启12.25更新</view>
+          <view class="weui-media-box__desc">开黑小分队再次回归，元旦第一周返场程咬金华尔街大亨和张良天堂福音，第二周返场孙尚香的火炮千金和妲己的仙境爱丽丝，这四款皮肤都是288点券，但只有华尔街大亨的性价比较高。</view>
+        </view>
+      </navigator>
+      <navigator class="weui-media-box weui-media-box_appmsg" catchtap="onTapToDetail2" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="../../../../image/topic3.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">王者荣耀12月法师排行 王昭君已成中单霸者</view>
+          <view class="weui-media-box__desc">王者荣耀12月法师排行，本次更新法师王昭君半重做后表现突出，成为中单霸者。12月份的到来，除了王昭君强势法师还有哪些呢？下面一起来看看王者荣耀十二月法师排行吧！</view>
+        </view>
+
+      </navigator>
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="{{icon60}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">标题一</view>
+          <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="{{icon60}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">标题一</view>
+          <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="{{icon60}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view catchtap='onTapToDetail' class="weui-media-box__title">标题一</view>
+          <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="{{icon60}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">标题一</view>
+          <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+        </view>
+      </navigator>
+    </view>
+    
+  </view>
+</view>

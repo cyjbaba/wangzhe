@@ -1,0 +1,172 @@
+<!--page/hero/index.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__bd">
+              <view catchtap='onTapToDetail' class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/lx.png" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">李信</view>
+                  <view class="weui-media-box__desc">战士</view>
+                </view>
+
+              </view>
+              <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" catchtap="onTapToDetail1">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/diaochan.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">貂蝉</view>
+                  <view class="weui-media-box__desc">法师</view>
+                </view>
+
+              </view>
+              <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" catchtap="onTapToDetail2">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/mq.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">梦奇</view>
+                  <view class="weui-media-box__desc">坦克</view>
+                </view>
+
+              </view>
+              <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" catchtap="onTapToDetail1">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/llw.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">兰陵王</view>
+                  <view class="weui-media-box__desc">刺客</view>
+                </view>
+
+              </view>
+              <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" catchtap="onTapToDetail1">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/lbqh.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">鲁班七号</view>
+                  <view class="weui-media-box__desc">射手</view>
+                </view>
+
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__bd">
+              <view catchtap='onTapToDetail' class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/lx.png" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">李信</view>
+                  <view class="weui-media-box__desc">战士</view>
+                </view>
+
+              </view>
+              <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" catchtap="onTapToDetail1">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/zy.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">赵云</view>
+                  <view class="weui-media-box__desc">战士</view>
+                </view>
+
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <view class="weui-panel weui-panel_access">
+        <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" catchtap="onTapToDetail2">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/mq.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">梦奇</view>
+                  <view class="weui-media-box__desc">坦克</view>
+                </view>
+
+              </view>
+        </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__bd">
+              <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/diaochan.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">貂蝉</view>
+                  <view class="weui-media-box__desc">法师</view>
+                </view>
+
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 4}}">
+        <view class="weui-panel weui-panel_access">
+        <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" catchtap="onTapToDetail1">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/zz.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">庄周</view>
+                  <view class="weui-media-box__desc">辅助</view>
+                </view>
+
+              </view>
+        </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 5}}">
+        <view class="weui-panel weui-panel_access">
+        <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" catchtap="onTapToDetail1">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/lbqh.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">鲁班七号</view>
+                  <view class="weui-media-box__desc">射手</view>
+                </view>
+
+              </view>
+        </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 6}}">
+        <view class="weui-panel weui-panel_access">
+        <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" catchtap="onTapToDetail1">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="../../../image/llw.jpg" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title">兰陵王</view>
+                  <view class="weui-media-box__desc">刺客</view>
+                </view>
+
+              </view>
+        </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

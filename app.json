@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "page/default/index",
+    "page/default/pages/detail/detail",
+    "page/default/pages/detail1/detail1",
+    "page/default/pages/detail2/detail2",
+    "page/default/pages/detail-list/detail-list",
+    
+    "page/hero/index",
+    "page/hero/pages/hero-list/hero-list",
+    "page/hero/pages/hero-message/hero-message",
+    "page/hero/pages/hero-message1/hero-message1",
+    "page/hero/pages/hero-message2/hero-message2",
+    "page/setting/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "page/default/index",
+      "text": "首页",
+      "iconPath": "image/index.png",
+      "selectedIconPath": "image/indexed.png"
+    },{
+      "pagePath": "page/hero/index",
+      "text": "英雄库",
+      "iconPath": "image/icon_component.png",
+      "selectedIconPath": "image/icon_component_HL.png"
+    }
+
+    ]
+  }
+}

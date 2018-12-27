@@ -1,0 +1,58 @@
+<view class="page-body">
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="swiper-item {{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">最新资讯>></view>
+    <view class="weui-panel__bd">
+      <navigator catchtap='onTapToDetail' class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="../../../../image/topic.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">正能量小课堂丨狄某的这4个逆风局套路，召唤师真的了解吗？</view>
+          <view class="weui-media-box__desc">自狄仁杰护卫站上线后，监视对局的力度增加，目前峡谷的对局环境都有所改善。但除了有护卫站应对不良对局行为之外，能在对局当下解决问题的，是召唤师你自己。</view>
+        </view>
+
+      </navigator>
+      <navigator class="weui-media-box weui-media-box_appmsg" catchtap="onTapToDetail1" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="../../../image/topic2.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">王者荣耀4款限定皮肤返场 冰雪活动开启12.25更新</view>
+          <view class="weui-media-box__desc">开黑小分队再次回归，元旦第一周返场程咬金华尔街大亨和张良天堂福音，第二周返场孙尚香的火炮千金和妲己的仙境爱丽丝，这四款皮肤都是288点券，但只有华尔街大亨的性价比较高。</view>
+        </view>
+
+      </navigator>
+    </view>
+    <view class="weui-panel__ft">
+      <view class="weui-cell weui-cell_access weui-cell_link">
+        <view catchtap="onTapToDetailList" class="weui-cell__bd">查看更多</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">精彩视频>></view>
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+      <view class="page-body">
+        <view class="page-section tc">
+          <video id="myVideo" src="http://112.13.87.42/vhot2.qqvideo.tc.qq.com/A-qePexUshtGg7KDG0jqe-HOfhZzN0Q_BR2SBk1cpKRY/r0814liu6rk.m701.mp4?vkey=8B6AB47E78A3F7A3DC56655DB12E539DA838381FD5A734E2411C968ACC619C13BF2AB2EDB63EAE7EA062FF7460AEBE77917287E5197F11CDD3BA1A88E4510930570FAB0B82CA9D63B3569B17862C6ED5A706F9EE275976D1BAF2B123EBD7CA4C4A836C7F9AC078D0"
+            binderror="videoErrorCallback" enable-danmu show-center-play-btn='{{false}}' show-play-btn="{{true}}" controls></video>
+
+          
+        </view>
+      </view>
+        <view class="weui-media-box__title">【王者荣耀】新英雄介绍：上官婉儿</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,110 @@
+/* page/hero/index.wxss */
+@import "../common/index.wxss";
+@import "../common/lib/weui.wxss";
+.search-area {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #ddd;
+}
+.search-area input {
+  width: calc(100% - 150rpx);
+  padding: 16rpx;
+  background: #eee;
+  border: none;
+  border-radius: 8rpx;
+  box-shadow: none;
+  outline: none;
+  font-size: 28rpx;
+}
+.search-area .button {
+  position: absolute;
+  right: 0;
+  padding: 20rpx 30rpx 20rpx 30rpx;
+  background: #1AAD19;
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: bold;
+  border-radius: 8rpx;
+}
+
+.waiting_img {
+  position: relative;
+  top: -30rpx;
+}
+
+.item {
+  margin: 0 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  padding: 20rpx 0;
+}
+.item .link {
+  display: flex;
+}
+.item .cover,
+.item .cover .img {
+  width: 168rpx;
+  height: 252rpx;
+}
+.item .detail {
+  flex: 1;
+  padding-left: 20rpx;
+}
+.item .detail .name {
+  font-size: 30rpx;
+}
+.item .detail .extra {
+  color: #999;
+  margin-top: 4rpx;
+  font-size: 28rpx;
+}
+.item .detail .score {
+  color: #1AAD19;
+}
+
+.warn {
+  text-align: center;
+  font-size: 28rpx;
+  padding: 30rpx 0;
+  color: #999;
+}
+.cleanbox {
+  padding: 60rpx;
+}
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+
+
+.weui-navbar__slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 3em;
+  height: 3px;
+  background-color: #1AAD19;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+.weui-media-box__thumb {
+  width: 60px;
+  height: 60px;
+  vertical-align: top;
+}
+.weui-media-box__hd_in-appmsg {
+  margin-right: .8em;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
